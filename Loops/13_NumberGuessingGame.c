@@ -1,0 +1,1 @@
+//Store a secret integer in the program. Repeatedly ask the user to guess the number. Display 'Higher' when the guess is too low, 'Lower' when it is too high, and 'Correct' when the guess matches. Continue until the user guesses correctly.
