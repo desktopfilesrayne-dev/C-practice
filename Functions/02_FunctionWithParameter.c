@@ -18,7 +18,9 @@ TODO:
 
 #include <stdio.h>
 
-/* TODO: Write the function prototype here. */
+void num(int n){
+    printf("%d", n);
+}
 
 int main(void)
 {
@@ -26,10 +28,9 @@ int main(void)
 
     printf("Enter an integer: ");
     scanf("%d", &number);
-
-    /* TODO: Call your function and pass number. */
+    num(number);
 
     return 0;
 }
 
-/* TODO: Write the function definition here. */
+

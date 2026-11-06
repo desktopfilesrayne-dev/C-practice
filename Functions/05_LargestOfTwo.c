@@ -20,7 +20,7 @@ TODO:
 
 #include <stdio.h>
 
-/* TODO: Write the function prototype here. */
+int larg (int, int);
 
 int main(void)
 {
@@ -29,11 +29,17 @@ int main(void)
     printf("Enter two integers: ");
     scanf("%d %d", &first, &second);
 
-    /* TODO: Call your function and store the result. */
-
-    /* TODO: Display largest. */
+    largest=larg(first,second);
+   
+    printf("The largest number among the two is %d", largest);
+    
 
     return 0;
 }
 
-/* TODO: Write the function definition here. */
+int larg(int a, int b){
+    if(a<=b)
+        return b;
+    else
+        return a;
+}

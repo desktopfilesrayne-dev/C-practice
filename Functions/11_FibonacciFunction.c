@@ -28,7 +28,7 @@ TODO:
 
 #include <stdio.h>
 
-/* TODO: Write your function prototype here. */
+void fibo(int);
 
 int main(void)
 {
@@ -37,9 +37,27 @@ int main(void)
     printf("Enter N: ");
     scanf("%d", &n);
 
-    /* TODO: Validate n and call your Fibonacci function. */
+   if (n<=0)printf("Invalid term");
+   else{
+        fibo(n);
+   }
 
     return 0;
 }
 
-/* TODO: Write your function definition here. */
+void fibo(int n){
+    if (n==1) printf("0");
+    else if (n==2) printf("1");
+    else{
+        int prev=0, curr=1, term;
+        printf("0\n");
+        printf("1\n");
+        for(int i=1;i<=n-2;i++){
+            term=curr+prev;
+                printf("%d\n", term);
+            prev=curr;
+            curr=term;
+        }
+    }
+
+}

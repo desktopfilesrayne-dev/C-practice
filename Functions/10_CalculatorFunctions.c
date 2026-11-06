@@ -26,11 +26,14 @@ TODO:
 
 #include <stdio.h>
 
-/* TODO: Write the four function prototypes here. */
+double sum(double,double);
+double diff(double,double);
+double prod(double,double);
+double quo(double,double);
 
 int main(void)
 {
-    double first, second, result;
+    double first, second;
     char operation;
 
     printf("Enter an operation (+, -, *, /): ");
@@ -39,10 +42,25 @@ int main(void)
     printf("Enter two numbers: ");
     scanf("%lf %lf", &first, &second);
 
-    /* TODO: Use switch or if/else to call the correct function.
-       Remember to check for division by zero. */
+    if(operation=='+')
+        printf("The sum is %lf\n", sum(first, second));
+    else if(operation=='-')
+        printf("The difference is %lf\n", diff(first, second));
+    else if(operation=='*')
+        printf("The product is %lf\n", prod(first, second));
+    else if(operation=='/'){
+        if(second==0)
+            printf("Undefined\n");
+        else
+        printf("The quotient is %lf\n", quo(first, second));
+    }
+    else  
+        printf("Operation is invalid");
 
     return 0;
 }
 
-/* TODO: Define the four operation functions here. */
+double sum(double a,double b) {return a+b;}
+double diff(double a,double b) {return a-b;}
+double prod(double a,double b) {return a*b;}
+double quo(double a,double b) {return a/b;}

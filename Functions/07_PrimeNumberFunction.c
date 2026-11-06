@@ -22,7 +22,7 @@ TODO:
 
 #include <stdio.h>
 
-/* TODO: Write the function prototype here. */
+void prime(int);
 
 int main(void)
 {
@@ -31,9 +31,24 @@ int main(void)
     printf("Enter an integer: ");
     scanf("%d", &number);
 
-    /* TODO: Call your function and report whether number is prime. */
+    prime(number);
 
     return 0;
 }
 
-/* TODO: Write the function definition here. */
+void prime(int n){
+  if(n<=1){
+    printf("The number is not prime");
+    return;}
+  int count =0;
+  for(int i=1;i<=n;i++){
+    if(n%i==0){
+      count+=1;
+    }
+  }
+  if (count>2)
+    printf("The number is not prime.");
+  else
+    printf("The number is prime");
+}
+

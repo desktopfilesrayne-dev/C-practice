@@ -17,11 +17,12 @@ TODO:
 
 #include <stdio.h>
 
-/* TODO: Write the function definition here. */
+void displayMessage(){
+    printf("Short message.");
+}
 
 int main(void)
 {
-    /* TODO: Call displayMessage(). */
-
+    displayMessage();
     return 0;
 }

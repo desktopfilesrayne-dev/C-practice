@@ -20,7 +20,7 @@ TODO:
 
 #include <stdio.h>
 
-/* TODO: Write the function prototype here. */
+int larg(int, int, int);
 
 int main(void)
 {
@@ -29,11 +29,21 @@ int main(void)
     printf("Enter three integers: ");
     scanf("%d %d %d", &first, &second, &third);
 
-    /* TODO: Call your function and store the result. */
-
-    /* TODO: Display largest. */
+    largest=larg(first, second, third);
+    printf("The largest number among the three is %d", largest);
 
     return 0;
 }
 
-/* TODO: Write the function definition here. */
+int larg(int a, int b, int c){
+    int largest;
+    if(a>=b)
+        largest=a;
+    else
+        largest=b;
+    
+    if(largest>=c)
+        return largest;
+    else 
+        return c;
+}

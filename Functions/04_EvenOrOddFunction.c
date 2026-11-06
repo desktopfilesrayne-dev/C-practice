@@ -20,7 +20,7 @@ TODO:
 
 #include <stdio.h>
 
-/* TODO: Write the function prototype here. */
+void evenodd(int);
 
 int main(void)
 {
@@ -29,9 +29,15 @@ int main(void)
     printf("Enter an integer: ");
     scanf("%d", &number);
 
-    /* TODO: Call your function. */
+    evenodd(number);
 
     return 0;
 }
 
-/* TODO: Write the function definition here. */
+void evenodd(int number){
+    if (number%2==0){
+        printf("The number is even.");
+    }
+    else{
+        printf("The number is odd.");
+    }}

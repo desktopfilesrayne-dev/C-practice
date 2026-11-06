@@ -19,20 +19,20 @@ TODO:
 
 #include <stdio.h>
 
-/* TODO: Write the function prototype here. */
+int sum(int, int);
 
 int main(void)
 {
-    int first, second, sum;
+    int first, second;
 
     printf("Enter two integers: ");
     scanf("%d %d", &first, &second);
 
-    /* TODO: Call your function and store the returned sum. */
-
-    /* TODO: Display sum. */
+    printf("The sum is %d", sum(first, second));
 
     return 0;
 }
 
-/* TODO: Write the function definition here. */
+int sum(int a, int b){
+    return a+b;
+}

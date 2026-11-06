@@ -29,7 +29,7 @@ TODO:
 
 #include <stdio.h>
 
-/* TODO: Write the function prototype here. */
+long long int fact(int);
 
 int main(void)
 {
@@ -37,10 +37,18 @@ int main(void)
 
     printf("Enter a non-negative integer: ");
     scanf("%d", &n);
+  if (n<0) 
+    printf("The number is negative.");
+  else printf("The factorial is %lld", fact(n));
 
-    /* TODO: Check n and call your factorial function. */
 
     return 0;
 }
 
-/* TODO: Write the function definition here. */
+long long fact (int n){
+  long long factorial =1;
+  for(int i=1;i<=n;i++){
+    factorial*=i;
+  }
+  return factorial;
+}

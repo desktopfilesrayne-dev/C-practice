@@ -29,30 +29,70 @@ TODO:
 
 #include <stdio.h>
 
-/* TODO: Write the function prototypes here. */
+void add();
+void sub();
+void mul();
+
 
 int main(void)
 {
     int choice;
-    double first, second;
+
 
     do
     {
-        printf("\\n===== MENU =====\\n");
-        printf("1. Addition\\n");
-        printf("2. Subtraction\\n");
-        printf("3. Multiplication\\n");
-        printf("4. Exit\\n");
-        printf("Choose an option: ");
+        printf("\n===== MENU =====\n");
+        printf("1. Addition\n");
+        printf("2. Subtraction\n");
+        printf("3. Multiplication\n");
+        printf("4. Exit\n");
+        printf("Choose an option: \n");
         scanf("%d", &choice);
 
-        /* TODO: Use switch or if/else to process the choice.
-           For choices 1-3, read two numbers and call the matching
-           function. For choice 4, exit the loop. */
+        if(choice>=1&&choice<4){
+        switch(choice){
+            case 1: 
+                add();
+                break;
+            case 2:
+                sub();
+                break;
+            case 3:
+                mul();
+                break;
+        }}
+        else if(choice==4)               
+            break;
+        else   
+            printf("Invalid Opeartion,");
+                
 
     } while (choice != 4);
 
     return 0;
 }
 
-/* TODO: Define the three operation functions here. */
+void add(){
+    int a, b;
+        printf("----------ADDITION----------\n");
+        printf("Enter the two numbers: \n");
+        scanf("%d %d", &a, &b);
+        printf("The sum is %d.\n", a+b);
+        printf("_____________________________\n");
+}
+void sub(){
+    int a, b;
+        printf("----------SUBTRACTION----------\n");
+        printf("Enter the two numbers: \n");
+        scanf("%d %d", &a, &b);
+        printf("The difference is %d.\n", a-b);
+        printf("_____________________________\n");
+}
+void mul(){
+    int a, b;
+        printf("----------MULTIPLICATION----------\n");
+        printf("Enter the two numbers: \n");
+        scanf("%d %d", &a, &b);
+        printf("The product is %d.\n", a*b);
+        printf("_____________________________\n");
+}

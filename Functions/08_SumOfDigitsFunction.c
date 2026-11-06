@@ -23,18 +23,28 @@ TODO:
 
 #include <stdio.h>
 
-/* TODO: Write the function prototype here. */
+int sumofdig(int);
 
 int main(void)
 {
-    int number, sum;
+    int number;
 
     printf("Enter a positive integer: ");
     scanf("%d", &number);
-
-    /* TODO: Validate the input, call your function, and display sum. */
+    if(number<0)
+        printf("Invalid input");
+    else
+    printf("The sum of the digits of the number is %d", sumofdig(number));
 
     return 0;
 }
 
-/* TODO: Write the function definition here. */
+int sumofdig(int n){
+    int digit, sum=0;
+    do{
+        digit = n%10;
+        sum+=digit;
+        n/=10;
+    }while(n>0);
+    return sum;
+}
